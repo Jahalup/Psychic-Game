@@ -1,0 +1,25 @@
+
+    html {
+      font-family: sans-serif;
+    }
+    body {
+      width: 50%;
+      max-width: 800px;
+      min-width: 480px;
+      margin: 0 auto;
+      font-family: 'Berkshire Swash', cursive;
+      font-size: 30px;
+      background-color: lightsalmon;
+    }
+    .lastResult {
+      color: white;
+      padding: 3px;
+    }
+    .guessSubmit {
+      border-radius: 50%;
+      color: green;
+      font-size: 40px;
+      font-family: 'Berkshire Swash', cursive;
+    }
+    
+    
