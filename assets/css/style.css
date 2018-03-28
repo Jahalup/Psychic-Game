@@ -21,5 +21,9 @@
       font-size: 40px;
       font-family: 'Berkshire Swash', cursive;
     }
+    #fortune {
+      float: left;
+      margin: 15px;
+    }
     
     

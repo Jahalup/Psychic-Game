@@ -28,12 +28,12 @@ document.onkeyup = function(event) {
     }
     else {
         guesses--;
-        document.getElementById('previousg').innerHTML += userGuess;
+        document.getElementById('previousg').innerHTML += userGuess + " ";
     }
 
-    document.getElementById('wins').innerHTML = "Wins: " + wins;
-    document.getElementById('losses').innerHTML = "losses: " + losses;
-    document.getElementById('guesses').innerHTML = "Guesses left: " + guesses;
+    document.getElementById('wins').innerHTML = wins;
+    document.getElementById('losses').innerHTML = losses;
+    document.getElementById('guesses').innerHTML = guesses;
 
 };
 
