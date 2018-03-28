@@ -1,78 +1,45 @@
 
-var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-var randomLetter = alphabet[Math.floor(Math.random() * alphabet.length)];
-var guesses = document.querySelector('.guesses');
-var lastResult = document.querySelector('.lastResult');
-var guessSubmit = document.querySelector('.guessSubmit');
-var guessEntry= document.querySelector('.guessEntry');
+var alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l',
+'m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
 
-var count = 10;
-var counter = document.querySelector('.counter');
-var resetButton;
-guessEntry.focus();
+// Variables for tracking our wins, losses and guesses
+var wins = 0;
+var losses = 0;
+var guesses = 10;
 
-function checkGuess() {
-    var userGuess = guessEntry.value;
-    if (count < 10) {
+
+var computerChoice = alphabet[Math.floor(Math.random() * alphabet.length)];
+console.log(computerChoice)
+
+document.onkeyup = function(event) {
+    var userGuess = event.key;
+    
+    
+
+    if(userGuess === computerChoice){
+        wins++;
+        setGameOver();
+        }
         
-    guesses.textContent += userGuess + ' ';}
 
-    if (userGuess === randomLetter) {
-        lastResult.textContent = 'Congratulations! You got it right!';
-        lastResult.style.backgroundColor = 'green';
+    else if (guesses === 0){
+        losses++;
         setGameOver();
-    } 
-    else if (count === 0) {
-        lastResult.textContent = '!!GAME OVER!!';
-        setGameOver();
-    }
-    else if (count===6) {
-        lastResult.textContent = "You can't do it, can you??"
-        lastResult.style.backgroundColor = 'blue';
-    }
-    else if (count===3) {
-        lastResult.textContent = "Just a few more and I win!!"
-        lastResult.style.backgroundColor = 'orange';
     }
     else {
-        lastResult.textContent = 'Wrong!';
-        lastResult.style.backgroundColor = 'red';
-
+        guesses--;
+        document.getElementById('previousg').innerHTML += userGuess;
     }
-    
-counter.textContent = count--
-guessEntry.value = " ";
-guessEntry.focus();
-}
 
-guessSubmit.addEventListener('click', checkGuess);
+    document.getElementById('wins').innerHTML = "Wins: " + wins;
+    document.getElementById('losses').innerHTML = "losses: " + losses;
+    document.getElementById('guesses').innerHTML = "Guesses left: " + guesses;
+
+};
 
 function setGameOver() {
-    guessEntry.disabled = true;
-    guessSubmit.disabled = true;
-    resetButton = document.createElement('button');
-    resetButton.textContent = 'Start new game';
-    document.body.appendChild(resetButton);
-    resetButton.addEventListener('click', resetGame);
+    computerChoice = alphabet[Math.floor(Math.random() * alphabet.length)];
+    console.log(computerChoice);
+    document.getElementById('previousg').innerHTML =" ";
+    guesses=10;
 }
-
-function resetGame() {
-    counter.textContent = 10;
-    
-    var resetParas = document.querySelectorAll('.resultParas p');
-    for (var i = 0; i < resetParas.length; i++) {
-        resetParas[i].textContent = '';
-    }
-    
-    resetButton.parentNode.removeChild(resetButton);
-    
-    guessEntry.disabled = false;
-    guessSubmit.disabled = false;
-    guessEntry.value = '';
-    guessEntry.focus();
-    lastResult.style.backgroundColor = 'lightsalmon';
-    randomLetter = alphabet[Math.floor(Math.random() * alphabet.length)];
-    
-    }
-
-   
