@@ -1,7 +1,5 @@
 
-    html {
-      font-family: sans-serif;
-    }
+    /* Styling for body: color/googlefont */
     body {
       width: 50%;
       max-width: 800px;
@@ -11,16 +9,7 @@
       font-size: 30px;
       background-color: lightsalmon;
     }
-    .lastResult {
-      color: white;
-      padding: 3px;
-    }
-    .guessSubmit {
-      border-radius: 50%;
-      color: green;
-      font-size: 40px;
-      font-family: 'Berkshire Swash', cursive;
-    }
+    /* Image style */
     #fortune {
       float: left;
       margin: 15px;
