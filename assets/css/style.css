@@ -1,5 +1,33 @@
 
-    /* Styling for body: color/googlefont */
+/* Styling for title*/
+    .title {
+    margin-bottom: 38px;
+    font-size: 66px;
+    font-family: 'Berkshire Swash', cursive;
+    }
+    
+/* Styling for Instructions */
+    .Instructions {
+      margin-bottom: 38px;
+    font-size: 35px;
+    font-family: 'Berkshire Swash', cursive;
+    }
+
+    .container {
+      background-color: lightsalmon;
+    }
+
+    .params {
+    position: relative;
+    left: 31px;
+    top: 46px;
+    }
+
+/* Margins between parameters */
+    .Win, .remain, .Loss, .already {
+      margin: 7px;
+    }
+/* Overall body style */
     body {
       width: 50%;
       max-width: 800px;
@@ -7,9 +35,10 @@
       margin: 0 auto;
       font-family: 'Berkshire Swash', cursive;
       font-size: 30px;
-      background-color: lightsalmon;
+      background-color: lightsalmon; 
     }
-    /* Image style */
+
+/* Image style */
     #fortune {
       float: left;
       margin: 15px;

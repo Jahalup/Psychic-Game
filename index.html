@@ -5,29 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
-    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet"> 
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
     
 
 </head>
 
 <body>
+    <div class="container">
    <!-- Basic game title/instructions -->
-  <h1>Letter Guessing Game</h1>
-  <p>I have selected a random letter. See if you can guess it in 10 turns or fewer. Good Luck!</p>
-
+        <div class="title">
+            <h1>Letter Guessing Game</h1>
+        </div>
+        <div class="Instructions">
+            <p>I have selected a random letter. See if you can guess it in 10 turns or fewer. <br>Good Luck!</p>
+        </div>
   <!-- Fortune teller image -->
-  <img id="fortune" src= "assets/images/fortune.png">
+        <div class="fortuneTeller">
+            <img id="fortune" src= "assets/images/fortune.png">
+        </div>
   
   <!-- Paramaters to be changed in-game -->
-  <p>Wins: <span id ="wins"></span></p>
-  <p>Losses: <span id="losses"></span></p>
-  <p>Guesses Remaining: <span id="guesses"></span></p>
-  <p>Letters Already Guessed: <span id="previousg"></span></p>
- 
+        <div class="params">
+            <div class="Win">
+                <p>Wins: <span id ="wins"></span></p>
+            </div>
+            <div class="Loss">
+                <p>Losses: <span id="losses"></span></p>
+            </div>
+            <div class="remain">
+                <p>Guesses Remaining: <span id="guesses"></span></p>
+            </div>
+            <div class="already">
+                <p>Letters Already Guessed: <span id="previousg"></span></p>
+            </div>
+        </div>
+    </div>
   
-  <script src="assets/javascript/game.js"></script> 
+<script src="assets/javascript/game.js"></script> 
 
 </body>
 </html>
