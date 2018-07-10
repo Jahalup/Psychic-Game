@@ -11,5 +11,5 @@ The user must begin by pressing any letter (making a guess). If the user is corr
 
 **Link to Game**
 
-[Heroku Link](https://jahalup.github.io/Psychic-Game/)
+[Link to game](https://jahalup.github.io/Psychic-Game/)
 
